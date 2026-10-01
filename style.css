@@ -1,0 +1,624 @@
+```css
+/* =========================
+   GENERAL
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Georgia, serif;
+    color: white;
+    background-color: #2b0a18;
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+.page-section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 70px 20px;
+}
+
+.content {
+    width: 100%;
+    max-width: 850px;
+}
+
+
+/* =========================
+   HOME
+========================= */
+
+#home {
+    background:
+        linear-gradient(
+            135deg,
+            #2b0a18,
+            #6b1837,
+            #a8325b
+        );
+}
+
+.small-text {
+    font-size: 16px;
+    letter-spacing: 5px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 65px;
+    margin: 10px 0;
+}
+
+.nickname {
+    font-size: 24px;
+    font-style: italic;
+    margin-bottom: 30px;
+}
+
+.intro-text {
+    font-size: 20px;
+    line-height: 1.8;
+}
+
+.heart {
+    font-size: 40px;
+    margin: 25px;
+}
+
+
+/* =========================
+   HEADINGS
+========================= */
+
+h2 {
+    font-size: 45px;
+    margin-bottom: 30px;
+}
+
+h3 {
+    font-size: 25px;
+}
+
+.section-label {
+    font-size: 14px;
+    letter-spacing: 4px;
+    opacity: 0.7;
+}
+
+
+/* =========================
+   STORY
+========================= */
+
+#story {
+    background-color: #401426;
+}
+
+#story p {
+    font-size: 19px;
+    line-height: 1.9;
+}
+
+
+/* =========================
+   LOVE
+========================= */
+
+#love {
+    background-color: #551b35;
+}
+
+.love-card {
+    background-color: rgba(255, 255, 255, 0.08);
+    padding: 25px;
+    margin: 18px auto;
+    border-radius: 20px;
+    max-width: 650px;
+}
+
+.love-card p {
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.special-love {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+
+/* =========================
+   MEMORIES
+========================= */
+
+#memories {
+    background-color: #30101f;
+}
+
+.memory-intro {
+    font-size: 19px;
+    line-height: 1.8;
+    margin-bottom: 50px;
+}
+
+.memory {
+    margin: 60px auto;
+    max-width: 650px;
+}
+
+.memory img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 25px;
+    display: block;
+    margin: auto;
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.4);
+    transition:
+        transform 0.6s ease,
+        box-shadow 0.6s ease;
+}
+
+.memory img:hover {
+    transform: scale(1.03);
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.6);
+}
+
+.memory p {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+
+/* =========================
+   VIDEO
+========================= */
+
+.video-memory {
+    margin-top: 80px;
+}
+
+.video-memory video {
+    width: 100%;
+    max-width: 750px;
+    border-radius: 25px;
+    margin-top: 25px;
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.5);
+}
+
+.video-caption {
+    font-style: italic;
+    font-size: 18px;
+    margin-top: 25px;
+}
+
+
+/* =========================
+   SURPRISE
+========================= */
+
+#surprise {
+    background:
+        linear-gradient(
+            135deg,
+            #6b1837,
+            #a8325b
+        );
+}
+
+#surprise p {
+    font-size: 20px;
+    line-height: 1.8;
+}
+
+.surprise-intro {
+    max-width: 650px;
+    margin: 0 auto 35px;
+    font-size: 20px;
+    line-height: 1.8;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.main-button {
+    display: inline-block;
+    text-decoration: none;
+    border: none;
+    padding: 15px 32px;
+    border-radius: 30px;
+    font-size: 17px;
+    cursor: pointer;
+    background-color: white;
+    color: #6b1837;
+    margin-top: 25px;
+    transition: 0.3s;
+}
+
+.main-button:hover {
+    transform: scale(1.07);
+    background-color: #ffe1eb;
+}
+
+
+/* =========================
+   GIFT BOX
+========================= */
+
+.gift-box {
+    position: relative;
+    width: 130px;
+    height: 120px;
+    margin: 40px auto;
+    animation: giftFloat 3s ease-in-out infinite;
+}
+
+.gift-body {
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    width: 110px;
+    height: 80px;
+    background-color: white;
+    color: #a8325b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 45px;
+    border-radius: 5px;
+}
+
+.gift-lid {
+    position: absolute;
+    top: 25px;
+    left: 0;
+    width: 130px;
+    height: 25px;
+    background-color: #ffe1eb;
+    border-radius: 5px;
+    z-index: 2;
+}
+
+.gift-ribbon {
+    position: absolute;
+    top: 25px;
+    left: 57px;
+    width: 16px;
+    height: 80px;
+    background-color: #a8325b;
+    z-index: 3;
+}
+
+@keyframes giftFloat {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================
+   BIRTHDAY MESSAGE
+========================= */
+
+.hidden-message {
+    display: none;
+}
+
+.hidden-message.show {
+    display: block;
+    animation: surpriseReveal 2s ease;
+}
+
+.birthday-letter {
+    position: relative;
+    overflow: hidden;
+    max-width: 700px;
+    margin: 50px auto 0;
+    padding: 45px 30px;
+    background-color: rgba(255, 255, 255, 0.12);
+    border-radius: 30px;
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.birthday-letter::before {
+    content: "♥";
+    position: absolute;
+    top: 20px;
+    left: 25px;
+    font-size: 25px;
+    opacity: 0.2;
+}
+
+.birthday-letter::after {
+    content: "♥";
+    position: absolute;
+    bottom: 20px;
+    right: 25px;
+    font-size: 25px;
+    opacity: 0.2;
+}
+
+.birthday-letter h2 {
+    font-size: 36px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.birthday-letter p {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+    line-height: 1.9;
+}
+
+.final-heart {
+    font-size: 45px !important;
+    animation: heartBeat 1.5s ease-in-out infinite;
+}
+
+.signature {
+    font-size: 24px !important;
+    font-style: italic;
+    margin-top: 35px;
+}
+
+
+/* =========================
+   BIRTHDAY ANIMATIONS
+========================= */
+
+@keyframes surpriseReveal {
+
+    0% {
+        opacity: 0;
+        transform: translateY(40px) scale(0.95);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+}
+
+@keyframes heartBeat {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}
+
+
+/* =========================
+   FLOATING HEARTS
+========================= */
+
+.floating-hearts {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 10;
+}
+
+.floating-hearts span {
+    position: absolute;
+    bottom: -50px;
+    font-size: 20px;
+    opacity: 0.25;
+    animation: floatingHeart 12s linear infinite;
+}
+
+.floating-hearts span:nth-child(1) {
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.floating-hearts span:nth-child(2) {
+    left: 25%;
+    animation-delay: 3s;
+}
+
+.floating-hearts span:nth-child(3) {
+    left: 45%;
+    animation-delay: 6s;
+}
+
+.floating-hearts span:nth-child(4) {
+    left: 65%;
+    animation-delay: 2s;
+}
+
+.floating-hearts span:nth-child(5) {
+    left: 80%;
+    animation-delay: 5s;
+}
+
+.floating-hearts span:nth-child(6) {
+    left: 90%;
+    animation-delay: 8s;
+}
+
+@keyframes floatingHeart {
+
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0.3;
+    }
+
+    80% {
+        opacity: 0.3;
+    }
+
+    100% {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+
+}
+
+
+/* =========================
+   PHOTO VIEWER
+========================= */
+
+.photo-viewer {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.92);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.photo-viewer.show-photo {
+    display: flex;
+}
+
+.photo-content {
+    text-align: center;
+    animation: photoZoom 0.8s ease;
+}
+
+.photo-content img {
+    max-width: 90vw;
+    max-height: 75vh;
+    border-radius: 20px;
+    display: block;
+    margin: auto;
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.7);
+    animation: photoGlow 2s ease-in-out infinite alternate;
+}
+
+#photoCaption {
+    margin-top: 20px;
+    font-size: 20px;
+    line-height: 1.6;
+    color: white;
+    font-style: italic;
+}
+
+.close-photo {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    font-size: 50px;
+    color: white;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+@keyframes photoZoom {
+
+    from {
+        opacity: 0;
+        transform: scale(0.85);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+}
+
+@keyframes photoGlow {
+
+    from {
+        box-shadow:
+            0 10px 40px rgba(255, 255, 255, 0.15);
+    }
+
+    to {
+        box-shadow:
+            0 20px 70px rgba(255, 255, 255, 0.35);
+    }
+
+}
+
+
+/* =========================
+   SCROLL HINT
+========================= */
+
+.scroll-hint {
+    margin-top: 35px;
+    opacity: 0.7;
+}
+
+.scroll-hint span {
+    display: block;
+    font-size: 35px;
+    animation: scrollDown 1.5s ease-in-out infinite;
+}
+
+.scroll-hint p {
+    margin-top: 5px;
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+@keyframes scrollDown {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        transform: translateY(0);
